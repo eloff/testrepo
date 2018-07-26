@@ -1,8 +1,1 @@
-A file added.
-
-Add
-lines
-to the
-file
-
-changed content
+rewrite file contents
