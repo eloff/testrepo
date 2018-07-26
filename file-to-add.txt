@@ -1,7 +1,9 @@
 A file added.
 
 Add
-some
 lines
 to the
 file
+
+with some
+new content
