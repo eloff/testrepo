@@ -28,7 +28,7 @@ const (
 	WhitespaceChange ChangeType = iota
 	AddedChange
 	// Remove some lines and add 1
-	//Add new enum types above this line
+	// Churn a line
 	NumberChangeTypes
 )
 
@@ -41,7 +41,7 @@ type Repo interface {
 	Diff(commit Commit) (*Diff, error)
 }
 
-// Add some
+// Churn another line
 // lines before
 // the previously added lines below
 func (commit *Commit) String() string {
@@ -56,7 +56,7 @@ func (commit *Commit) String() string {
 }
 
 // Add some
-// more lines
+// churning again
 type BaseRepo struct {
 	VCSName        string
 	RepositoryName string
