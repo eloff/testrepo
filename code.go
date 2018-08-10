@@ -37,6 +37,7 @@ const (
 
 type Repo interface {
 	SetBranch(branch string) error
+	// Add a line
 	Commits() ([]Commit, error)
 	NameStatus(commit Commit) ([]FileStatus, error)
 	Diff(commit Commit) (*Diff, error)
@@ -61,6 +62,8 @@ func (commit *Commit) String() string {
 	)
 }
 
+// Add some
+// more lines
 type BaseRepo struct {
 	VCSName        string
 	RepositoryName string
@@ -80,6 +83,8 @@ func (repo *BaseRepo) Exists() error {
 		}
 		return merry.Errorf("%q is not a %s repository", repo.Repository, repo.VCSName)
 	}
+
+	// Add more lines
 	return nil
 }
 
