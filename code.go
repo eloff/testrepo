@@ -27,30 +27,23 @@ const (
 const (
 	WhitespaceChange ChangeType = iota
 	AddedChange
-	RemovedChange
-	MovedChange
-	SymbolChange
-	SimilarChange
+	// Remove some lines and add 1
 	//Add new enum types above this line
 	NumberChangeTypes
 )
 
 type Repo interface {
 	SetBranch(branch string) error
+	// Add a line before
 	// Add a line
 	Commits() ([]Commit, error)
 	NameStatus(commit Commit) ([]FileStatus, error)
 	Diff(commit Commit) (*Diff, error)
 }
 
-type Commit struct {
-	Revision string
-	Parents  []string
-	Author   string
-	Date     time.Time
-	Message  string
-}
-
+// Add some
+// lines before
+// the previously added lines below
 func (commit *Commit) String() string {
 	return fmt.Sprintf(
 		"commit %s\nParents: %s\nAuthor: %s\nDate: %s\n\n%s\n",
